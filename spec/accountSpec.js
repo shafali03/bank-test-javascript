@@ -15,4 +15,12 @@ describe('Account', () => {
     account.deposit(1000)
     expect(account.balance).toEqual(1000)
   })
+
+
+  it('should decrease balance £500', () => {
+    account = new Account
+    account.deposit(1000)
+    account.withdraw(500)
+    expect(account.balance).toEqual(500)
+  })
 })

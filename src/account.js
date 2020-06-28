@@ -8,3 +8,7 @@ function Account() {
 Account.prototype.deposit = function (money) {
   this.balance += money
 }
+
+Account.prototype.withdraw = function (money) {
+  this.balance -= money
+}
