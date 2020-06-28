@@ -23,4 +23,17 @@ describe('Account', () => {
     account.withdraw(500)
     expect(account.balance).toEqual(500)
   })
+
+
+  describe('account statement', () => {
+
+    it('should display one deposit transactions', () => {
+      account = new Account
+      account.deposit(100)
+      expect(account.transactions.length).toEqual(1)
+    })
+
+  })
+
+
 })
