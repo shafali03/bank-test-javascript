@@ -2,6 +2,7 @@
 
 function Account() {
   this.balance = 0;
+  this.transactions = ["date || credit || debit || balance"]
 }
 
 
