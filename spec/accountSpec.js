@@ -24,7 +24,7 @@ describe('Account', () => {
     expect(account.balance).toEqual(500)
   })
 
-  it('can deposit many times into account ', () => {
+  it('can deposit many times from account ', () => {
     account = new Account
     account.deposit(1000)
     account.deposit(100)
@@ -34,7 +34,7 @@ describe('Account', () => {
   })
 
 
-  it('can deposit and withdraw into account ', () => {
+  it('can deposit and withdraw from account ', () => {
     account = new Account
     account.deposit(1000)
     account.withdraw(100)
