@@ -34,6 +34,17 @@ describe('Account', () => {
   })
 
 
+  it('can deposit and withdraw into account ', () => {
+    account = new Account
+    account.deposit(1000)
+    account.withdraw(100)
+    account.withdraw(500)
+    account.withdraw(300)
+    account.deposit(1400)
+    expect(account.balance).toEqual(1500)
+  })
+
+
   describe('account statement', () => {
 
     it('should display one deposit', () => {
