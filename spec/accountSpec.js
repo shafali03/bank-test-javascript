@@ -24,6 +24,15 @@ describe('Account', () => {
     expect(account.balance).toEqual(500)
   })
 
+  it('can deposit many times into account ', () => {
+    account = new Account
+    account.deposit(1000)
+    account.deposit(100)
+    account.deposit(200)
+    account.deposit(300)
+    expect(account.balance).toEqual(1600)
+  })
+
 
   describe('account statement', () => {
 
@@ -46,9 +55,6 @@ describe('Account', () => {
       expect(account.transactions).toEqual(["date || credit || debit || balance", `${date} || || 200 || 800`, `${date} || 1000 || || 1000`])
     })
   })
-
-
-
 
 
 })
