@@ -33,14 +33,18 @@ describe('Account', () => {
       expect(account.transactions.length).toEqual(2)
     })
 
-
     it('should display deposit transaction', () => {
       account = new Account
       account.deposit(1000)
       expect(account.transactions).toEqual(["date || credit || debit || balance", `${date} || 1000 || || 1000`])
     })
 
-
+    it('should display a withdraw transaction', () => {
+      account = new Account
+      account.deposit(1000)
+      account.withdraw(200)
+      expect(account.transactions).toEqual(["date || credit || debit || balance", `${date} || || 200 || 800`, `${date} || 1000 || || 1000`])
+    })
   })
 
 
