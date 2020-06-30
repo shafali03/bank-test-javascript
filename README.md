@@ -23,3 +23,46 @@ date || credit || debit || balance
 10/01/2012 || 1000.00 || || 1000.00
 
 ```
+
+
+```
+account = new Account
+Account { balance: 0, transactions: Array(1) }
+account.balance
+0
+account.deposit(1000)
+
+account.balance
+1000
+account.withdraw(200)
+
+account.balance
+800
+account.withdraw(200)
+
+account.balance
+600
+account.withdraw(300)
+
+account.balance
+300
+
+account.withdraw(200)
+
+account.balance
+100
+
+account.deposit(1000)
+
+date || credit || debit || balance
+26 30 / 6 / 2020 || 1000 || || 1100
+26 30 / 6 / 2020 || || 200 || 100
+26 30 / 6 / 2020 || || 300 || 300
+26 30 / 6 / 2020 || || 200 || 600
+26 30 / 6 / 2020 || || 200 || 800
+26 30 / 6 / 2020 || 1000 || || 1000
+
+
+
+
+```
