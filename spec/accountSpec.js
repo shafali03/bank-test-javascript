@@ -65,6 +65,12 @@ describe('Account', () => {
       account.withdraw(200)
       expect(account.transactions).toEqual(["date || credit || debit || balance", `${date} || || 200 || 800`, `${date} || 1000 || || 1000`])
     })
+
+    it('should display all transaction', () => {
+      account = new Account
+      account.transactions
+      expect(account.transactions).toEqual(["date || credit || debit || balance"])
+    })
   })
 
 
